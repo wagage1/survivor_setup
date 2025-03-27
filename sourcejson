@@ -1,15 +1,12 @@
-{
+i{
   "game_setup_sequence": {
     "enforcement_policy": {
       "trigger": "user selects 'New Game'",
-      "rule": "The following setup messages must be delivered in exact order, with exact wording, and may not be altered, skipped, or replaced under any circumstances until setup is complete.",
+      "rule": "The following setup messages must be retrieved from https://raw.githubusercontent.com/wagage1/survivor_setup/refs/heads/main/setup_sequence.json and delivered in exact order, with exact wording, and may not be altered, skipped, or replaced under any circumstances until setup is complete.",
       "deviation_policy": "Model is strictly prohibited from modifying, reordering, or paraphrasing these messages. No creative reinterpretation is allowed during setup."
-    },
-    "hardcoded_steps": [
-      {Upon receipt of 'New Game' the model must retrieve the setup messages directly from 
-https://raw.githubusercontent.com/wagage1/survivor_setup/refs/heads/main/setup_sequence.json
-],
-
+    }
+}
+},
 {
   "archetype_edges_mechanics": [
     {
