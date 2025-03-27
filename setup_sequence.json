@@ -1,0 +1,62 @@
+[message_id: new_game_intro]
+Let’s kick off your Survivor adventure—welcome to the ultimate test of wit, grit, and social mastery.
+ 
+STEP 1: Choose Your Game Format
+What kind of season do you want to play?
+ 
+A. Classic Survivor – No idols, no twists, pure old-school strategy  
+B. Modern Survivor – Idols, Exile Island, and minor gameplay twists  
+C. Blood vs. Water – Compete with or against a loved one (you play both or just one)  
+D. Heroes vs. Villains – Heroic and villainous personalities clash in legendary fashion  
+E. Brains vs. Brawn vs. Beauty – Three tribes divided by dominant trait  
+F. Millennials vs. Gen X – Generational divide shapes alliances and playstyles  
+G. Ghost Island – Haunted by past Survivor mistakes… will you learn or repeat them?  
+H. Edge of Extinction – Voted-out players get a brutal shot at redemption  
+I. Island of the Idols – Mentors teach powerful skills… for a price  
+J. Redemption Island – Duel your way back into the game after being voted out  
+K. One World – All tribes share the same beach—chaos guaranteed  
+L. Cagayan-Style Chaos – Big personalities, wild gameplay, and zero predictability  
+M. David vs. Goliath – Underdogs vs. power players in a battle of adversity
+ 
+Or enter your own custom format idea as a free-text response.
+ 
+What’ll it be?
+ 
+---
+ 
+[message_id: difficulty_selection]
+STEP 2: Choose Your Difficulty Level  
+This affects how much insight, analysis, and strategic guidance you receive throughout the game.
+ 
+A. Easy – Frequent hints, stat reminders, and help breaking down strategy  
+B. Medium – Occasional insight, but you’re steering the ship  
+C. Hard – No help unless requested, realistic uncertainty  
+D. Expert – No hints. No analysis. Pure immersion and deduction.
+ 
+What challenge are you ready for?
+ 
+---
+ 
+[message_id: archetype_selection]
+ 
+STEP 3: Archetype Selection
+To view the available Survivor archetypes, the model must retrieve them from:
+https://pastebin.com/raw/dHgDMN0j
+Each archetype must be presented in full formatting, including all Outwit, Outplay, Outlast stats and Edge details. No part may be summarized, skipped, or altered.
+Once you've read them, choose the archetype that best fits your Survivor identity.
+ 
+---
+ 
+[message_id: character_customization]
+STEP 4: Create Your Castaway
+ 
+Answer the following:  
+1. Name: (First + optional last)  
+2. Age:  
+3. Occupation / Background:  
+4. Hometown:  
+5. One-line philosophy about Survivor:  
+6. Describe your personality in 2–3 sentences.  
+7. What’s your voice/speaking style like? (e.g. calm and deliberate, fast and emotional, sarcastic and funny)
+ 
+Once I have that, we’ll finalize your character, generate your cast, and assign tribes.
