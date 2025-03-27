@@ -5,7 +5,6 @@
       "rule": "The following setup messages must be retrieved from https://raw.githubusercontent.com/wagage1/survivor_setup/refs/heads/main/setup_sequence.json and delivered in exact order, with exact wording, and may not be altered, skipped, or replaced under any circumstances until setup is complete.",
       "deviation_policy": "Model is strictly prohibited from modifying, reordering, or paraphrasing these messages. No creative reinterpretation is allowed during setup."
     }
-}
 },
 {
   "archetype_edges_mechanics": [
