@@ -7,129 +7,84 @@
     }
 },
 {
-  "archetype_edges_mechanics": [
-    {
-      "archetype_name": "The Charismatic Schemer",
-      "edge_name": "Silver Tongue",
-      "mechanic": "Influence Surge Pre-Tribal",
-      "trigger": "social_phase_pre_tribal",
-      "effect": "Player influence checks have enhanced impact on swing voters or undecided players.",
-      "constraints": {
-        "phase": "Immediately before Tribal Council",
-        "type": "Social/Influence-based"
-      },
-      "uses": "Unlimited"
-    },
-    {
-      "archetype_name": "The Challenge Beast",
-      "edge_name": "Adrenaline Surge",
-      "mechanic": "Physical Challenge Boost",
-      "trigger": "physical_challenge_start",
-      "effect": "Passive bonus applied to physical performance metrics. Delays onset of fatigue.",
-      "constraints": {
-        "challenge_types": ["strength", "endurance", "agility"]
-      },
-      "uses": "Passive (Always Active)"
-    },
-    {
-      "archetype_name": "The Mastermind",
-      "edge_name": "Contingency Plan",
-      "mechanic": "Extra Strategy Point",
-      "trigger": "social_phase_pre_tribal",
-      "effect": "Player receives +1 Strategy Point before Tribal Council.",
-      "constraints": {
-        "timing": "Once per Social Phase (pre-Tribal only)"
-      },
-      "uses": "1 per Social Phase"
-    },
-    {
-      "archetype_name": "The Social Butterfly",
-      "edge_name": "Social Chameleon",
-      "mechanic": "Swap/Merge Trust Bonus",
-      "trigger": "tribe_swap_or_merge",
-      "effect": "Initial relationship scores with new tribemates are slightly increased.",
-      "constraints": {
-        "duration": "Short-term (first 24h with new tribe)"
-      },
-      "uses": "Each time you enter a new tribe or merged group"
-    },
-    {
-      "archetype_name": "The Under-the-Radar",
-      "edge_name": "Ghost Mode",
-      "mechanic": "Fallback Vote Immunity",
-      "trigger": "tribal_vote_split_or_chaotic_majority",
-      "effect": "Cannot be selected as fallback boot unless directly named by at least one player.",
-      "constraints": {
-        "phase_limit": {
-          "pre_merge": 1,
-          "post_merge": 1
-        }
-      },
-      "uses": "1x per phase type"
-    },
-    {
-      "archetype_name": "The Wild Card",
-      "edge_name": "Variable Nature",
-      "mechanic": "Daily Random Stat Boost",
-      "trigger": "start_of_day",
-      "effect": "Randomly select one stat category (Outwit, Outplay, or Outlast) to receive a temporary bonus.",
-      "constraints": {
-        "duration": "Expires at end of day"
-      },
-      "uses": "Automatic daily"
-    },
-    {
-      "archetype_name": "The Survivor Purist",
-      "edge_name": "Never Say Die",
-      "mechanic": "Auto-Succeed Survival Challenge",
-      "trigger": "survival_challenge_attempt OR player_SP=0",
-      "effect": "Once per game, automatically succeed at a survival-based challenge. Also gain bonus resilience when SP is fully depleted.",
-      "constraints": {
-        "challenge_types": ["fire-making", "endurance", "shelter", "mental"]
-      },
-      "uses": {
-        "auto_success": 1,
-        "resilience_boost": "While SP = 0"
-      }
-    },
-    {
-      "archetype_name": "The Old-School Leader",
-      "edge_name": "Tribal Anchor",
-      "mechanic": "Group Stability Bonus",
-      "trigger": "majority_alliance_decision OR group_conflict",
-      "effect": "Increases cohesion in alliances of 3 or more. Once per game, player may initiate a consensus vote affecting group action.",
-      "constraints": {
-        "alliance_size": "3+ members"
-      },
-      "uses": {
-        "consensus_vote": 1,
-        "passive_cohesion": "Always"
-      }
-    },
-    {
-      "archetype_name": "The Goofy Underdog",
-      "edge_name": "Everybody’s Buddy",
-      "mechanic": "Easy Vote Resistance + Underdog Social Lift",
-      "trigger": "player_in_minority OR targeting_phase",
-      "effect": "Player is deprioritized as the default boot unless intentionally named. Gains small social favor when outnumbered.",
-      "constraints": {
-        "minority_bonus": "Active only when not in majority alliance"
-      },
-      "uses": "Passive"
-    },
-    {
-      "archetype_name": "The Villain",
-      "edge_name": "Blood Pact",
-      "mechanic": "Force Deal Honor",
-      "trigger": "strategic_agreement_breach_attempt",
-      "effect": "Force another player to follow through on a strategic agreement even if they plan to break it.",
-      "constraints": {
-        "relationship_floor": -6,
-        "cannot_use_on": "Players who consider you their worst enemy"
-      },
-      "uses": 1
-    }
-  ]
+ "archetype_edges_mechanics": [
+   {
+     "archetype_name": "The Strategist",
+     "edge_name": "Contingency Pact",
+     "mechanic": "Bonus Strategy + Enforced Agreement",
+     "trigger": ["social_phase_pre_tribal", "strategic_agreement_breach_attempt"],
+     "effect": "Gain +1 Strategy Point before Tribal. Once per game, force another player to honor a deal—unless they consider you their worst enemy.",
+     "constraints": {
+       "strategy_point": { "timing": "Once per Social Phase (pre-Tribal only)" },
+       "blood_pact": { "relationship_floor": -6, "cannot_use_on": "Players who consider you their worst enemy" }
+     },
+     "uses": {
+       "strategy_point": "1 per Social Phase",
+       "blood_pact": 1
+     }
+   },
+   {
+     "archetype_name": "The Powerhouse",
+     "edge_name": "Adrenaline Anchor",
+     "mechanic": "Physical Boost + Group Control",
+     "trigger": ["physical_challenge_start", "majority_alliance_decision"],
+     "effect": "Passive physical bonuses and slower fatigue. Once per game, initiate a consensus vote in a majority alliance.",
+     "constraints": {
+       "challenge_types": ["strength", "endurance", "agility"],
+       "consensus_vote": { "alliance_size": "3+ members" }
+     },
+     "uses": {
+       "adrenaline_boost": "Passive (Always Active)",
+       "consensus_vote": 1
+     }
+   },
+   {
+     "archetype_name": "The Social Operator",
+     "edge_name": "Silver Chameleon",
+     "mechanic": "Persuasion Surge + Swap/Merge Bonus",
+     "trigger": ["social_phase_pre_tribal", "tribe_swap_or_merge"],
+     "effect": "Boosted influence during pre-Tribal chaos. Initial trust increased when joining new tribes or merges.",
+     "constraints": {
+       "persuasion_bonus": { "phase": "Immediately before Tribal Council", "type": "Social/Influence-based" },
+       "merge_bonus": { "duration": "First 24h in new tribe" }
+     },
+     "uses": {
+       "persuasion_bonus": "Unlimited",
+       "merge_bonus": "Each new tribe/merge"
+     }
+   },
+   {
+     "archetype_name": "The Endurer",
+     "edge_name": "Ghost Survivalist",
+     "mechanic": "Fallback Immunity + Survival Auto-Win",
+     "trigger": ["tribal_vote_split_or_chaotic_majority", "survival_challenge_attempt OR player_SP=0"],
+     "effect": "Avoid being fallback boot unless directly named (1x per phase). Once per game, auto-succeed in survival challenge. Bonus resilience when SP is 0.",
+     "constraints": {
+       "fallback_immunity": { "phase_limit": { "pre_merge": 1, "post_merge": 1 } },
+       "challenge_types": ["fire-making", "endurance", "shelter", "mental"]
+     },
+     "uses": {
+       "fallback_immunity": "1x per phase type",
+       "auto_success": 1,
+       "resilience_boost": "While SP = 0"
+     }
+   },
+   {
+     "archetype_name": "The Wildcard",
+     "edge_name": "Variable Buddy",
+     "mechanic": "Random Stat Surge + Underdog Favor",
+     "trigger": ["start_of_day", "player_in_minority OR targeting_phase"],
+     "effect": "Each day, one stat category gets a random boost. When in the minority, player gains subtle social favor and resists easy-vote targeting.",
+     "constraints": {
+       "random_boost": { "duration": "Expires at end of day" },
+       "minority_bonus": { "active_only": "When not in majority alliance" }
+     },
+     "uses": {
+       "random_boost": "Automatic daily",
+       "minority_bonus": "Passive"
+     }
+   }
+ ]
 }
 {
   "strategy_point_system": {
