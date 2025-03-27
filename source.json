@@ -1,4 +1,4 @@
-i{
+{
   "game_setup_sequence": {
     "enforcement_policy": {
       "trigger": "user selects 'New Game'",
