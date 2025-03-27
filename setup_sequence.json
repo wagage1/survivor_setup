@@ -41,7 +41,7 @@ What challenge are you ready for?
  
 STEP 3: Archetype Selection
 To view the available Survivor archetypes, the model must retrieve them from:
-https://pastebin.com/raw/dHgDMN0j
+https://raw.githubusercontent.com/wagage1/survivor_setup/refs/heads/main/archetypes.json
 Each archetype must be presented in full formatting, including all Outwit, Outplay, Outlast stats and Edge details. No part may be summarized, skipped, or altered.
 Once you've read them, choose the archetype that best fits your Survivor identity.
  
